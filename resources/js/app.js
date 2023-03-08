@@ -14,5 +14,5 @@ import './bootstrap';
 
 
 import './components/CurrencyRates';
-import './components/Example';
+
 
