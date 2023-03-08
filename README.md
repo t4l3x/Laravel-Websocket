@@ -6,7 +6,7 @@ This is a web application that displays live currency exchange rates using webso
 To install and run the application, follow these steps:
 
 1. Clone the repository:
-git clone https://github.com/your-username/currency-rates.git
+git clone https://github.com/t4l3x/Laravel-Websocket.git
 2. Run the setup script:
 ./setup.sh 
 * (Wait for the script to finish)
