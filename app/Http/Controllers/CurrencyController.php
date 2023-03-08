@@ -10,14 +10,14 @@ use Illuminate\Http\Request;
 class CurrencyController extends Controller
 {
     /**
-     * @var \App\Services\Currency\CurrencyService
+     * @var CurrencyService
      */
     private CurrencyService $currencyService;
 
     /**
      * CurrencyController constructor.
      *
-     * @param \App\Services\Currency\CurrencyService $currencyService
+     * @param CurrencyService $currencyService
      */
     public function __construct(CurrencyService $currencyService)
     {

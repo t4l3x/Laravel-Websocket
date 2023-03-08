@@ -2,6 +2,7 @@
 
 use App\Services\WebSocketService;
 use BeyondCode\LaravelWebSockets\Facades\WebSocketsRouter;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,6 @@ Route::get('/', function () {
 });
 Route::get('/show/', 'App\Http\Controllers\CurrencyController@show');
 
-WebSocketsRouter::webSocket('/my-websocket', WebSocketService::class);
 
 
 Auth::routes();

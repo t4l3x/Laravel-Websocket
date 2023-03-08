@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services\Currency;
 
 use App\Events\CurrencyUpdated;
@@ -14,21 +15,15 @@ class CurrencyService
      */
     private $monobankApiService;
 
-    /**
-     * @var WebSocketService
-     */
-    private \App\Services\WebSocketService $webSocketService;
 
     /**
      * CurrencyService constructor.
      *
      * @param MonobankApiService $monobankApiService
-     * @param WebSocketService $webSocketService
      */
-    public function __construct(MonobankApiService $monobankApiService, WebSocketService $webSocketService)
+    public function __construct(MonobankApiService $monobankApiService)
     {
         $this->monobankApiService = $monobankApiService;
-        $this->webSocketService = $webSocketService;
     }
 
     /**
@@ -38,20 +33,14 @@ class CurrencyService
      */
     public function getCurrentRates(): array
     {
-//        $this->webSocketService->broadcast('currency_rates_updated', 'test');
-//        broadcast(new CurrencyUpdated($rates);
-//        $cachedRates = Cache::get('monobank_currency_rates');
-//
-//        if ($cachedRates) {
-//            return $cachedRates;
-//        }
+        $cachedRates = Cache::get('monobank_currency_rates');
+
+        if ($cachedRates) {
+            return $cachedRates;
+        }
 
         $rates = $this->monobankApiService->getCurrencyRates();
-//        $currencyObjects = [];
-//
-//        foreach ($rates as $currency) {
-//            $currencyObjects[] = new Currency($currency['currencyCodeA'], $currency['rateBuy'], $currency['rateSell']);
-//        }
+
 
         Cache::put('monobank_currency_rates', $rates, 5);
 
