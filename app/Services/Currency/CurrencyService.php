@@ -42,7 +42,7 @@ class CurrencyService
         $rates = $this->monobankApiService->getCurrencyRates();
 
 
-        Cache::put('monobank_currency_rates', $rates, 5);
+        Cache::put('monobank_currency_rates', $rates, 300);
 
 //
         event(new CurrencyUpdated($rates));
