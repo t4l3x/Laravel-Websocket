@@ -8,7 +8,7 @@ To install and run the application, follow these steps:
 1. Clone the repository:
 git clone https://github.com/t4l3x/Laravel-Websocket.git
 2. Run the setup script:
-./setup.sh 
+`sh setup.sh `
 * (Wait for the script to finish)
 3. Open your web browser and navigate to http://localhost/laravel-websockets will show the websockets dashboard.
 4. Open your web browser and navigate to http://localhost. You should see a blank page with the text "Currency Rates".(if not please open the public/hot file and change to http://localhost:5173
