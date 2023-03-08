@@ -9,7 +9,10 @@ To install and run the application, follow these steps:
 git clone https://github.com/your-username/currency-rates.git
 - Run the setup script:
 ./setup.sh
-- Open your web browser and navigate to http://localhost. You should see a blank page with the text "Currency Rates".
-- Open a new tab in your web browser and navigate to http://localhost/show. This will trigger the websockets and start fetching and displaying the currency exchange rates in real-time.
+- Open your web browser and navigate to http://localhost/laravel-websockets will show the websockets dashboard.
+- Open your web browser and navigate to http://localhost. You should see a blank page with the text "Currency Rates".(if not please open the public/hot file and change to http://localhost:5173
+  )
+- Open a new tab in your web browser and navigate to http://localhost/show. This will trigger
+the websockets and start fetching and displaying the currency exchange rates in real-time.
 - You should now see a table with the latest currency exchange rates.
-- http://localhost/laravel-websockets will show the websockets dashboard.
+
