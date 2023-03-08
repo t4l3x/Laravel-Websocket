@@ -22,3 +22,7 @@ Route::get('/show/', 'App\Http\Controllers\CurrencyController@show');
 
 WebSocketsRouter::webSocket('/my-websocket', WebSocketService::class);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
